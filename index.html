@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janelas 69 - Sistema Operacional</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="body">
+    <div id="splash-screen">
+        <header id="topo">
+        </header>
+        <main id="meio">
+            <h1 id="welcome">welcome</h1>
+        </main>
+        <footer id="baixo">
+        </footer>
+    </div>
+    <audio id="startup-sound" src="startup_sound.mp3" preload="auto"></audio>
+    <div id="desktop">
+        <img src="background.png" id="background-image" alt="Background Janelas 69">
+        <section class="apps">
+            <div class="icon" id="recycle-bin">
+                <img src="recycle_bin.png" alt="Lixeira">
+                <p class="icon_name">Lixeira</p>
+            </div>
+            <div class="window">
+                <div class="window-titlebar">
+                    <span class="window-title">Lixeira</span>
+                    <button class="window-minimize-btn">_</button>
+                    <button class="window-maximize-btn"><i class="fa-regular fa-square"></i></button>
+                    <button class="window-close-btn" id="fechar"><i class="fa-regular fa-rectangle-xmark"></i></button>
+                </div>
+                <div class="window-options">
+                    <ul>
+                        <li>Arquivo</li>
+                        <li>Editar</li>
+                        <li>Exibir</li>
+                        <li>Favoritos</li>
+                        <li>Ferramentas</li>
+                        <li>Ajuda</li>
+                    </ul>
+                </div>
+                <div class="window-navigation">
+                    <div class="back-btn">
+                        <section id="arrow-left">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </section>
+                        <span>Voltar</span>
+                    </div>
+                    <div class="forward-btn">
+                        <section id="arrow-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </section>
+                        <span>Avançar</span>
+                    </div>
+                    <div class="window-search">
+                        <input type="text" placeholder="C:/Users/Administrador/Desktop/Recycle_Bin">
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="folders-area">
+                        <ul>
+                            <li>Usuário "Administrador"</li>
+                            <li>Desktop</li>
+                            <li>File System</li>
+                            <li>Documentos</li>
+                            <li>Downloads</li>
+                            <li>Musica</li>
+                            <li>Fotos</li>
+                            <li>Videos</li>
+                            <li>Lixeira</li>
+                            <li>Outros</li>
+                        </ul>
+                    </div>
+                    <div class="files-area">
+                        <ul>
+                            <div id="recycle">
+                            <img src="recycle_bin.png" alt="Lixeira">
+                            <p>Lixeira</p>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div id="taskbar">
+            <div id="start-button">
+                <span id="start-text">Start</span>
+                <div id="start-menu">
+                    <section id="name-area">
+                        <h1><i class="fa-solid fa-user"></i> Administrador</h1>
+                    </section>
+                    <section id="programs-area">
+                        <h1 id="excel"><i class="fa-solid fa-file-excel"></i> Excel</h1>
+                        <h1 id="google-chrome"><i class="fa-brands fa-google"></i> Google Chrome</h1>
+                        <h1 id="games"><i class="fa-solid fa-folder"></i> Jogos</h1>
+                        <h1>⠀</h1>
+                        <h1>⠀</h1>
+                        <h1>⠀</h1>
+                        <h1>⠀</h1>
+                        <h1>⠀</h1>
+                    </section>
+                    <section class="shut-down-area">
+                        <button id="shutdown" class="shutdown"><i class="fa-solid fa-power-off"></i> Desligar</button>
+                        <button class="log-off"><i class="fa-solid fa-right-from-bracket"></i> Log-off</button>
+                    </section>
+                </div>
+            </div>
+            <div id="clock">
+                <section class="clock-area">
+                    <span id="time" class="clock_data">69:00 PM</span>
+                    <span id="date" class="clock_data">31/02/2112</span>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+/* styles.css */
+
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Tela de carregar */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4A55A2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(74, 85, 162, 0.5); /* Adicionando sombra ao texto "Welcome" */
+}
+
+#topo {
+    background-color: #4A55A2;
+}
+
+#meio {
+    background-color: #7895CB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    width: 150rem;
+}
+
+#baixo {
+    background-color: #4A55A2;
+}
+
+/* Estilos do desktop */
+#desktop {
+    display: none;
+    position: relative;
+    width: 100vw; /* Ajusta a largura para ocupar toda a tela */
+    height: 100vh; /* Ajusta a altura para ocupar toda a tela */
+    overflow: hidden; /* Impede que a imagem de fundo crie barras de rolagem */
+}
+
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.png');
+    background-size: cover; /* A imagem de fundo se ajustará ao tamanho da tela */
+}
+
+/* Estilos da barra de tarefas */
+#taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #4A55A2; /* Cor da barra de tarefas */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilos do botão "Start" */
+#start-button {
+    width: 12rem;
+    height: 6rem;
+    background-image: linear-gradient(#82CD47, #379237); /* Cor do botão "Start" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-left: -1rem; /* Espaçamento à esquerda do botão "Start" */
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+#start-text {
+    color: #ffffff; /* Cor do texto do botão "Start" */
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: -1rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+}
+
+/* Estilos do menu iniciar */
+#start-menu {
+    position: absolute;
+    bottom: 88px; /* Ajusta a distância da barra de tarefas */
+    left: 10px; /* Ajusta a distância da borda esquerda */
+    width: 200px; /* Defina a largura do menu iniciar */
+    background-color: #FDF1DC; /* Cor de fundo do menu iniciar */
+    color: #ffffff; /* Cor do texto no menu iniciar */
+    border: 1px solid #4A55A2;
+    padding: 10px;
+    display: none; /* Inicia com o menu oculto */
+}
+
+/* Estilos do relógio */
+#clock {
+    position: absolute;
+    background-color: #7895CB;
+    color: #ffffff; /* Cor do texto do horário (branco) */
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 105rem;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 1rem;
+}
+
+.clock-area {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Estilos do menu iniciar (mostra ao passar o mouse sobre o botão "Start") */
+#start-button:hover #start-menu {
+    display: block;
+}
+
+#start-button:hover {
+    background-image: linear-gradient(#379237, #82CD47);
+}
+
+/* Estilos do botão de desligar */
+#shutdown-button {
+    width: 100%;
+    background-color: #ff0000; /* Cor do botão "Shutdown" */
+    color: #ffffff; /* Cor do texto do botão "Shutdown" */
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Estilos da área do nome do usuário */
+#name-area {
+    background-color: #4A55A2; /* Cor de fundo do nome */
+    padding: 10px;
+}
+
+#name-area h1 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Estilos da área com os programas */
+#programs-area {
+    background-color: #FDF1DC; /* Cor de fundo da área com os programas */
+    color:#4A55A2;
+    padding: 10px;
+}
+
+#programs-area h1 {
+    margin: 0;
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Estilos do efeito de destaque ao passar o mouse sobre os programas */
+#programs-area h1:hover {
+    background-color: #4A55A2;
+    color: #FDF1DC;
+}
+
+/* Estilos da área de desligar */
+.shut-down-area {
+    background-color: #4A55A2; /* Cor de fundo da área de desligar */
+    padding: 10px;
+}
+
+.shut-down-area button {
+    color: #ffffff; /* Cor do texto do botão de desligar */
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Estilos do botão de log-off */
+.log-off {
+    background-color: #e3b700; /* Deixando o amarelo 1 tom mais escuro */
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); /* Adiciona sombra atrás do texto */
+}
+
+/* Estilos do botão de desligar */
+.shutdown {
+    background-color: #ff0000;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); /* Adiciona sombra ao texto */
+}
+
+/* Estilos base para os ícones */
+.icon {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para o ícone da Lixeira */
+#recycle-bin {
+    position: relative;
+}
+
+#recycle-bin img {
+    width: 64px;
+    height: 64px;
+}
+
+#recycle img {
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+/* Estilos para o texto que aparece ao passar o mouse sobre o ícone */
+.icon_name {
+    color: white;
+    margin-top: -0.1rem;
+}
+
+.icon_name:hover {
+    background-color: #3061a5;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Estilos para o ícone selecionado */
+.icon.selected {
+    background-color: rgba(48, 97, 165, 0.5); /* Cor de fundo ao selecionar o ícone */
+    border-radius: 5px;
+    border: 1px solid blue;
+    
+}
+
+/* Estilos para o modelo de janela do Windows XP */
+
+.window {
+    display: none;
+    position: absolute;
+    top: 30rem;
+    left: 55rem;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 800px;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.window-titlebar {
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 5px;
+}
+
+.window-title {
+    flex: 1;
+    font-size: 16px;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.window-minimize-btn, .window-maximize-btn{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.window-close-btn {
+    background-color: transparent;
+    color: #F55353;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.window-options {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 5px;
+}
+  
+.window-options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+  
+.window-options li {
+    margin-right: 10px;
+    cursor: pointer;
+}
+  
+.window-navigation {
+    display: flex;
+    align-items: center;
+    background-color: #0078d7;
+    color: #fff;
+    padding: 5px;
+}
+
+.window-navigation .back-btn, .window-navigation .forward-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow-left, .arrow-right {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px;
+}
+
+
+#arrow-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  
+.window-search {
+    background-color: #0078d7;
+    color: #fff;
+    padding: 5px;
+}
+  
+.window-search input {
+    width: 30rem;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+  
+.window-content {
+    display: flex;
+    height: 100%;
+}
+  
+.folders-area, .files-area {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+  
+.folders-area ul, .files-area ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.folders-area li, .files-area li {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+  
+.folders-area li:hover, .files-area li:hover {
+    text-decoration: underline;
+}
+  
