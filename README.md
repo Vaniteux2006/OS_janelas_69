@@ -39,9 +39,9 @@ Este projeto está sob a licença [MIT](LICENSE). Sinta-se à vontade para usar,
 
 ## Capturas de Tela
 
-![Captura de tela 1](screenshot.png)
+![Captura de tela 1](screenshot.PNG)
 
-![Captura de tela 2](screenshot2.png)
+![Captura de tela 2](screenshot2.PNG)
 
 ---
 
